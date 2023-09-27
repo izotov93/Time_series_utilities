@@ -1,9 +1,9 @@
 import re
 
 config = {
-    'fname': 'Book1.txt',
-    'length': 200,
-    'step': 50
+    'fname': 'Returns_S_P_500.txt',
+    'length': 1350,
+    'step': 1
 }
 
 
@@ -25,7 +25,7 @@ def split_array(data, length: int, step: int):
         exit(0)
 
     res_series = [data[:length]]
-    index_list = [x for x in range(length, len_data, step)]
+    index_list = [x for x in range(length, len_data + 1, step)]
 
     for index in range(1, index_list.__len__()):
         res_series.append(data[index_list[index] - length:
